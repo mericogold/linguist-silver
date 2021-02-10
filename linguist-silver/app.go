@@ -1,3 +1,11 @@
+package api
+
+import (
+    "testing"
+
+    "github.com/go-test/deep"
+)
+
 func TestRenewer_NewRenewer(t *testing.T) {
     t.Parallel()
 
@@ -8,10 +16,15 @@ func TestRenewer_NewRenewer(t *testing.T) {
 
     cases := []struct {
         name string
+        i    *RenewerInput
+        e    *Renewer
         err  bool
     }{
         {
             "nil",
+            nil,
+            nil,
+            true,
         },
     }
 }
