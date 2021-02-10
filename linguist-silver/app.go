@@ -6,4 +6,12 @@ func TestRenewer_NewRenewer(t *testing.T) {
         t.Fatal(err)
     }
 
+    cases := []struct {
+        name string
+        err  bool
+    }{
+        {
+            "nil",
+        },
+    }
 }
