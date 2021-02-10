@@ -34,5 +34,15 @@ func TestRenewer_NewRenewer(t *testing.T) {
             nil,
             true,
         },
+        {
+            "default_grace",
+            &RenewerInput{
+                Secret: &Secret{},
+            },
+            &Renewer{
+                secret: &Secret{},
+            },
+            false,
+        },
     }
 }
