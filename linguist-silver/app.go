@@ -26,5 +26,13 @@ func TestRenewer_NewRenewer(t *testing.T) {
             nil,
             true,
         },
+        {
+            "missing_secret",
+            &RenewerInput{
+                Secret: nil,
+            },
+            nil,
+            true,
+        },
     }
 }
